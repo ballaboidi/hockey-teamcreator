@@ -1,7 +1,7 @@
 <template>
-  <div 
-    v-if="games"
+  <div
     class="container mx-auto bg-white rounded-lg shadow-lg p-10">
+    <Header />
     <GameRow 
       v-for="game in games"
       :key="game.id"

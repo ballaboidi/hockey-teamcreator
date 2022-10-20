@@ -8,6 +8,9 @@ module.exports = {
     "./nuxt.config.{js,ts}",
   ],
   theme: {
+    fontFamily: {
+      sans: ['futura-pt', 'sans-serif']
+    },
     extend: {},
   },
   plugins: [],

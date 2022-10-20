@@ -1,10 +1,15 @@
 query AllGames {
-  games{
+  games (pagination: {limit: -1}){
     data {
       id
       attributes{
         date
         title
+        players (pagination: {limit: -1}){
+          data {
+            id
+          }
+        }
       }
     }
   }
