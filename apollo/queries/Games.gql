@@ -1,0 +1,11 @@
+query AllGames {
+  games{
+    data {
+      id
+      attributes{
+        date
+        title
+      }
+    }
+  }
+}
