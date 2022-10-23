@@ -14,3 +14,43 @@ query AllGames {
     }
   }
 }
+
+query SingleGame ($id: ID!) {
+  game (id: $id) {
+    data {
+      id
+      attributes{
+        date
+        title
+        location
+        beers{
+          data {
+            id
+            attributes{
+              name
+              beer {
+                data {
+                  id
+                }
+              }
+            }
+          }
+        } 
+        players (pagination: {limit: -1}){
+          data {
+            id
+            attributes {
+              name
+              strength
+              games {
+                data {
+                  id
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
