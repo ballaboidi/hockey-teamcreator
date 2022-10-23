@@ -1,0 +1,7 @@
+mutation UpdateGame($id: ID!, $teams: JSON!) {
+  updateGame (id: $id, data:{teams: $teams} ) {
+    data {
+      id
+    }
+  }
+}
