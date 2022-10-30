@@ -45,7 +45,18 @@
         v-if="teams"
         class="players-teams my-8"
       >
-        <h3 class="mb-3 text-xl uppercase font-bold">BLACK TEAM</h3>
+        <div
+          class="teams-headline flex flex-row mt-1"
+        >
+          <img
+            class="h-[25px] mr-4"
+            src="~/assets/img/jersey-black.png"
+            alt=""
+          >
+          <h3 class="mb-3 text-xl uppercase font-bold">
+            BLACK TEAM
+          </h3>
+        </div>
         <div
           v-for="player in teams.black"
           :key="player.id"
@@ -53,7 +64,16 @@
         >
           <p>{{ player.name }}</p>
         </div>
-        <h3 class="mb-3 mt-5 text-xl uppercase font-bold">WHITE TEAM</h3>
+        <div
+          class="team-headline flex flex-row mt-5"
+        >
+          <img
+            class="h-[25px] mr-4"
+            src="~/assets/img/jersey-white.png"
+            alt=""
+          >
+          <h3 class="mb-3 text-xl uppercase font-bold">WHITE TEAM</h3>
+        </div>
         <div
           v-for="player in teams.white"
           :key="player.id"
